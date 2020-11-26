@@ -1,0 +1,50 @@
+# network summary
+# with anchor information
+
+dnn_01: 
+init_weights: 
+torch.nn.init.xavier_uniform_(m.weight, gain=torch.nn.init.calculate_gain('relu'))
+
+optimizer = torch.optim.SGD(net.parameters(), lr = 0.001, weight_decay=0.0001, momentum=0.9) 
+
+loss_func = torch.nn.L1Loss()       
+
+# initialize the early_stopping object
+patience = 10
+n_epochs = 500
+
+# activation function
+ReLU
+
+# ---------------------------------------- #
+# without anchor information 
+dnn_02: 
+
+init_weights:
+torch.nn.init.xavier_uniform_(m.weight, gain=torch.nn.init.calculate_gain('relu'))
+
+optimizer = torch.optim.SGD(net.parameters(), lr = 0.001, weight_decay=0.0001, momentum=0.9)  
+
+loss_func = torch.nn.L1Loss()      
+
+# initialize the early_stopping object
+patience = 10
+n_epochs = 500
+
+# activation function
+ReLU
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
