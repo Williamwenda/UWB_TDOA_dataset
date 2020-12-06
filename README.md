@@ -2,7 +2,7 @@
 We provide a UWB time-difference-of-arrival(TDOA) measurement dataset. 
 
 <p align="left">
-  <img width="400" height="260" src="./doc/figure.png">
+  <img width="400" height="450" src="./doc/block_diagram.png">
 </p>
 
 ## Requirements
