@@ -16,10 +16,10 @@ We provide a UWB time-difference-of-arrival(TDOA) measurement dataset. We collec
  - tkinter
  
 #### Show UWB measurements
-run `data_visual.py` and select the measurement data csv 
+Run `meas_visual.py` and select the measurement data csv 
 
 #### Show UWB measurement biases and neural network regression
-run `nn_visual.py` and select the UWB TDOA measurement bias data csv. Set 'WithAn' to 'True' to use the network with anchor orientation and 'False' to use the network without anchor orientation.
+Run `bias_visual.py` and select the UWB TDOA measurement bias data csv. To visualize the NN regression, set 'ShowNN' to 'True' and select network with/without anchor orientation by setting 'WithAn' to 'True' or 'False'.
 
 ## Training Data 
 #### UWB TDOA measurement and Vicon groundtruth.
