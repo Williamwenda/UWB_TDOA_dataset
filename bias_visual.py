@@ -1,5 +1,5 @@
 '''
-visualize the dnn regression
+visualize the UWB TDOA bias and dnn regression
 '''
 import rosbag, sys
 import pandas as pd
@@ -27,7 +27,7 @@ def denormalize(scl, norm_data):
     return new
 
 # PARAM
-WithAn = True
+WithAn = True;     ShowNN = True
 
 fileDir = os.path.dirname(__file__)
 # network with anchor information
@@ -78,14 +78,14 @@ y_test = y_error
 
 fig = plt.figure(facecolor="white")
 ax = plt.subplot()
-
 ax.scatter(t_uwb, y_test, color = "steelblue", s = 2.5, alpha = 0.9, label = "Original bias")
-ax.plot(t_uwb, uwbBias,  linewidth=2.5,color="tomato",label = "Predicted error")
+if ShowNN:
+    ax.plot(t_uwb, uwbBias,  linewidth=2.5,color="tomato",label = "Predicted error")
 ax.legend(loc='best')
 ax.set_xlabel(r'time [s]',fontsize=18)
 ax.set_ylabel(r'Error [m]',fontsize=18) 
 ax.set_ylim([-1.0, 1.0]) 
-plt.title("DNN tdoa inference", fontsize=18, fontweight=2, color='black')
+plt.title("UWB TDOA measurement bias", fontsize=18, fontweight=2, color='black')
 
 plt.show()
 
