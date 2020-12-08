@@ -15,6 +15,12 @@ We provide a UWB time-difference-of-arrival(TDOA) measurement dataset. We collec
  - pytorch (version 1.6.0)
  - tkinter
  
+#### Show UWB measurements
+Run `meas_visual.py` and select the measurement data csv 
+
+#### Show UWB measurement biases and neural network regression
+Run `bias_visual.py` and select the UWB TDOA measurement bias data csv. To visualize the NN regression, set 'ShowNN' to 'True' and select network with/without anchor orientation by setting 'WithAn' to 'True' or 'False'.
+
 ## Training Data 
 #### UWB TDOA measurement and Vicon groundtruth.
  - /training_csv/meas_data/#Date/#Trajectory
@@ -34,12 +40,6 @@ We provide a UWB time-difference-of-arrival(TDOA) measurement dataset. We collec
 #### anchor quaternion data format
  - row i: unit quaternion of UWN anchor i in the inertial frame
  q.w | q.x | q.y | q.z  
-
-#### Show UWB measurements
-Run `meas_visual.py` and select the measurement data csv 
-
-#### Show UWB measurement biases and neural network regression
-Run `bias_visual.py` and select the UWB TDOA measurement bias data csv. To visualize the NN regression, set 'ShowNN' to 'True' and select network with/without anchor orientation by setting 'WithAn' to 'True' or 'False'.
 
 ## Measurement Data Format
 #### 1-6 columns
